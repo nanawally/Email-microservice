@@ -7,7 +7,7 @@ COPY . .
 RUN gradle build -x test
 
 # ===== Stage 2: Package the application =====
-FROM eclipse-temurin:21-jdk21
+FROM eclipse-temurin:21-jdk
 WORKDIR /app
 
 # Copy the built JAR from the builder stage
@@ -18,3 +18,4 @@ EXPOSE 8070
 
 # Run the application
 ENTRYPOINT ["java", "-jar", "/app/email.jar"]
+
