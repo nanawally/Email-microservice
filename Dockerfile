@@ -1,5 +1,5 @@
 # ===== Stage 1: Build the application =====
-FROM gradle:8.7-jdk21 AS builder
+FROM gradle:8.14-jdk21 AS builder
 WORKDIR /app
 
 # Copy everything and build the JAR
